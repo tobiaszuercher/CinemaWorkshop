@@ -1,0 +1,15 @@
+Cinema:
+  - get movie list
+    - register service
+    - implement get
+    - implement filter
+
+  - add/post movie   
+    - post movie -> input validation
+    
+  - caching -> movie infos fetchen, in cache legen
+  - profiling
+    - lösung mit entity framework & mvc mini profiler -> (actors werden immer separat gefetched)
+  - request logging, logging
+  
+    
