@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="ServiceStack">
       <HintPath>..\packages\ServiceStack.3.9.46\lib\net35\ServiceStack.dll</HintPath>
@@ -88,8 +91,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HelloService\HelloAppHost.cs" />
+    <Compile Include="AppHost.cs" />
     <Compile Include="HelloService\HelloService.cs" />
+    <Compile Include="MovieService\MovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +109,10 @@
     <ProjectReference Include="..\Cinema.Contract\Cinema.Contract.csproj">
       <Project>{18F7D500-2E01-4199-9A69-78F949E1CA19}</Project>
       <Name>Cinema.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cinema.Entity\Cinema.Model.csproj">
+      <Project>{d16e7af3-94af-41a0-a5a4-b3ff41138115}</Project>
+      <Name>Cinema.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

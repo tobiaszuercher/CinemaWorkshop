@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Web;
 
-using Cinema.Backend.HelloService;
+using Cinema.Entity;
 
 namespace Cinema.Backend
 {
@@ -9,7 +10,8 @@ namespace Cinema.Backend
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            new HelloAppHost().Init();
+            CreateDatabaseAndPopulateData();
+            new AppHost().Init();
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -40,6 +42,11 @@ namespace Cinema.Backend
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+
+        private void CreateDatabaseAndPopulateData()
+        {
+            Database.SetInitializer(new DatabaseInitializer());
         }
     }
 }
